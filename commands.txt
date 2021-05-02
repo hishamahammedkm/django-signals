@@ -1,0 +1,14 @@
+virtualenv venv
+source venv/bin/activate
+pip install django
+django-admin startproject signals .
+python manage.py startapp orders
+python manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py shell
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+
